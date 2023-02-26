@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> divisibilityArray(string word, int m) {
         int n = word.size();
-        vector<int>arr(n);
+        vector<int>arr;
         long long x=0;
         for(int i=0;i<word.size();i++)
         {
@@ -10,9 +10,9 @@ public:
             x = x%m;
             
             if(x==0)
-                arr[i] = 1;
+                arr.push_back(1);
             else
-                arr[i] =0;
+                arr.push_back(0);
             
         }
         return arr;
